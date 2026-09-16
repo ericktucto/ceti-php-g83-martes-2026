@@ -1,0 +1,3 @@
+FROM php:8.5-fpm-alpine
+
+WORKDIR /app
