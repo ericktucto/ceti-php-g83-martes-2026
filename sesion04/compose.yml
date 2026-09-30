@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - '8080:8080'
+    networks:
+      - app_network
+  basededatos:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tienda
+      POSTGRES_USER: erick
+      POSTGRES_PASSWORD: 1234
+    volumes:
+      - ./datos:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - app_network
+volumes:
+  postgres_data:
+networks:
+  app_network:
