@@ -1,0 +1,19 @@
+{
+    "name": "erick/tienda",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Erick\\Tienda\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erick Tucto",
+            "email": "erick@ericktucto.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^8.1"
+    }
+}
