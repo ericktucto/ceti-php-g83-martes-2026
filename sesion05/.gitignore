@@ -1,2 +1,4 @@
 /datos/
 /app/vendor
+/app/.env
+/.env
